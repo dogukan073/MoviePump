@@ -1,6 +1,6 @@
 import inspect
 
-from src.db.db_manager import DBManager
+from src.db_manager.db_manager import DBManager
 
 
 class Messages:

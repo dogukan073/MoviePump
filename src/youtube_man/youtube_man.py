@@ -1,12 +1,11 @@
 """ """
-
-import json
 import os
 from typing import Optional
 
 from pytube import YouTube
 
 from src.config import Config
+from src.db_manager.db_manager import DBManager
 from src.exceptions import YoutubeIDException
 
 
@@ -14,15 +13,11 @@ class YoutubeMan:
     def __init__(self, urls: Optional[list] = None, id: Optional[int] = 0) -> None:
         """ """
         self.config = Config()
+        self.db_man = DBManager()
         self.selected_url_id: int = id
 
         if not urls:
-            file_name = "urls.json"
-            file_path = os.path.join(self.config.cwd, "src", "youtube_man", file_name)
-
-            with open(file=file_path) as f:
-                file = json.load(f)
-            urls = file.get("urls")
+            urls = self.db_man.get_youtube_urls()
 
         self._youtube_urls: list = urls
 
