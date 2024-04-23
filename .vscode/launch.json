@@ -1,0 +1,17 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Launch MoviePump",
+            "type": "debugpy",
+            "module": "src.main",
+            "request": "launch",
+            "console": "integratedTerminal",
+            "env": {
+                "WORK_ENV": "development",
+                "IS_OFFLINE": "true"
+            },
+            "args": []
+        }
+    ]
+}

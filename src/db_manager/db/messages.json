@@ -1,5 +1,5 @@
 {
     "en": {
-        "missing_youtube_id_msg": "Please select an ID or provide a valid youtube url"
+        "missing_youtube_id_exc": "Please select an ID or provide a valid youtube url"
     }
 }

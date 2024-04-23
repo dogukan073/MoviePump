@@ -6,5 +6,5 @@ class BaseException(Exception):
 
 
 class YoutubeIDException(BaseException):
-    def __init__(self, message=Messages().missing_youtube_id_msg) -> None:
+    def __init__(self, message=Messages().missing_youtube_id_exc) -> None:
         super().__init__(message)
